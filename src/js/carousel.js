@@ -1,5 +1,5 @@
-import left from "../images/icons/arrow-left-circle-fill.svg";
-import right from "../images/icons/arrow-right-circle-fill.svg";
+import left from "../images/icons/chevron-left.svg";
+import right from "../images/icons/chevron-right.svg";
 import stich from "../images/carousel/stich.jpg";
 import vingadores from "../images/carousel/vingadores.jpg";
 import menie from "../images/carousel/menie.jpg";
@@ -46,21 +46,21 @@ export default function Carousel() {
     }
   }
 
-  let autoSlideInterval; // Variável para armazenar o identificador do intervalo
+  let autoSlideInterval; 
 
   function autoSlider(play) {
     if (play) {
-      // Evita criar múltiplos intervalos
+      
       if (!autoSlideInterval) {
         autoSlideInterval = setInterval(() => {
-          changeSlide(1); // Muda para o próximo slide
-        }, 2000); // Intervalo de 3 segundos
+          changeSlide(1); // 
+        }, 3000);
       }
     } else {
-      // Para o intervalo se estiver ativo
+      
       if (autoSlideInterval) {
         clearInterval(autoSlideInterval);
-        autoSlideInterval = null; // Reseta o identificador
+        autoSlideInterval = null;
       }
     }
   }

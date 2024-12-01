@@ -1,20 +1,23 @@
 import "../css/style.css";
 import "../css/carousel.css";
-import logo from "../../public/logo.jpg";
+import logo from "/logo.jpg";
 import wppLogo from "../images/icons/whatsapp.svg";
 import shop from "../images/icons/bag-fill.svg";
 import bg from "../images/plano_de_fundo.jpeg";
+import bgDesktop from "../images/fundo-dourado-desktop.avif";
 import Carousel from "./carousel.js";
 import SubmitWpp from "./mensageWpp.js";
 
-const { html, init,auto } = Carousel()
+const { html, init,auto } = Carousel();
+
+const widthView = window.innerWidth;
 
 document.querySelector("#app").innerHTML = `
 
 <div id="container">
 
   <div id="bgImage">
-      <img src="${bg}" alt="logo" />
+      <img src="${widthView > 430 ? bgDesktop : bg}" alt="logo" />
   </div>
 
   <div id="content">
