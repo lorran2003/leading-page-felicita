@@ -83,6 +83,25 @@ button {
   background-color: #CDBA8D;
 }
 
+button:active{
+  box-shadow: 0 2px 5px #000 inset;
+}
+
 #btnSite {
   opacity: 0.3;
+}
+
+#whatsapp-button {
+  will-change: transform;
+  animation: bounce 0.8s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
 }
