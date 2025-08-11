@@ -19,13 +19,15 @@
 
 body {
   width: 100%;
-  height: 100%;
+  margin: 0;
+  height: 100vh;
+  background: url('../images/plano_de_fundo.jpeg') no-repeat center/cover;
 }
 
 #container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
 }
 
 #bgImage {
@@ -71,7 +73,7 @@ body {
 }
 
 button {
-  width: 30vh;
+  width: auto;
   border-radius: 10px;
   padding: 10px;
   color: #000;
@@ -83,15 +85,21 @@ button {
   background-color: #CDBA8D;
 }
 
-button:active{
+button:active {
   box-shadow: 0 2px 5px #000 inset;
 }
 
 #btnSite {
-  opacity: 0.3;
+  background-color: #fff;
+  color: #7D5990;
 }
 
-#whatsapp-button {
+#btnSite img{
+  will-change: transform;
+  animation: bounce 0.8s infinite alternate;
+}
+
+#whatsapp-button img {
   will-change: transform;
   animation: bounce 0.8s infinite alternate;
 }
@@ -104,4 +112,16 @@ button:active{
   100% {
     transform: translateY(-10px);
   }
+}
+
+@media screen and (min-width: 992px) {
+  #content {
+    width: 90%;
+    height: 100%;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
+
 }
